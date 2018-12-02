@@ -1,0 +1,17 @@
+﻿<UserControl
+    x:Class="Class_Board.Shapes.RegularTriangle"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:shapeRules="using:Class_Board.ShapeRules"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400" Name="container">
+    <UserControl.Resources>
+        <shapeRules:ColorManager x:Key="ColorManager"/>
+    </UserControl.Resources>
+    <Grid>
+        <Path x:Name="Path" Width="{Binding ElementName=container, Path=Width}" Height="{Binding ElementName=container, Path=Height}" Canvas.Left="124.642" Canvas.Top="122.103" Stretch="Fill" StrokeLineJoin="Round" Stroke="{Binding Instance.ColorBrush, Source={StaticResource ColorManager}}" StrokeThickness="{Binding Instance.StrokeThickness, Source={StaticResource ColorManager}}" Data="F1 M 398.517,122.603L 125.142,596.023L 671.823,596.063L 398.517,122.603 Z "/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,17 @@
+﻿<UserControl
+    x:Class="Class_Board.Shapes.StarShape"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:shapeRules="using:Class_Board.ShapeRules"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400" Name="container">
+    <UserControl.Resources>
+        <shapeRules:ColorManager x:Key="ColorManager"/>
+    </UserControl.Resources>
+    <Grid>
+        <Path x:Name="Star" Width="{Binding ElementName=container, Path=Width}" Height="{Binding ElementName=container, Path=Height}" Stroke="{Binding Instance.ColorBrush, Source={StaticResource ColorManager}}" StrokeThickness="{Binding Instance.StrokeThickness, Source={StaticResource ColorManager}}" Canvas.Left="121.641" Canvas.Top="21.9276" Stretch="Fill" StrokeLineJoin="Round" Data="F1 M 619.699,591.86L 520.074,368.739L 712.32,239.062L 477.097,254.852L 404.811,22.4276L 359.061,255.308L 122.141,241.338L 329.088,369.475L 254.949,593.267L 428.6,439.58L 619.699,591.86 Z "/>
+    </Grid>
+</UserControl>
